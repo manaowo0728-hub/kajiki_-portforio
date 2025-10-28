@@ -36,6 +36,10 @@
 
 <body>
 
+    <div id="loader_wrap">
+      <div class="loader"></div>
+    </div>
+
     <!-------------------------- ヘッダーここから -------------------------->
     <header>
 
@@ -254,5 +258,11 @@
 
     </main>
 
+    <script>
+window.onload = function () {
+const loader_element = document.getElementById('loader_wrap');
+loader_element.classList.add('loaded');
+};
+</script>
 </body>
 </html>

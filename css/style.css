@@ -1,0 +1,994 @@
+@charset "utf-8";
+
+/* =====================
+    　　　 共通
+===================== */
+
+p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4e4d4d;
+  font-size: clamp(0.875rem, calc(0.25vw + 0.8rem), 1rem);
+}
+
+
+
+a{
+  text-decoration: none;
+  color: #4e4d4d;
+  
+}
+
+h2{
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4e4d4d;
+}
+ 
+h3{
+   font-family: "Inter", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #4e4d4d;
+   font-size: clamp(1.5rem, calc(1vw + 1.2rem), 2.5rem);
+   text-align: center;
+   padding: 40px 0 25px 0;
+}
+
+h4{
+   font-family: "Inter", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #4e4d4d;
+   font-size: clamp(1.5rem, calc(1vw + 1.2rem), 2.5rem);
+   text-align: left;
+   padding: 30px 0;
+}
+
+h5{
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 2%;
+
+   display: flex;
+  background-color: #edca62;
+  padding: 10px 30px;
+  border-radius: 4px;
+  width: fit-content;
+ 
+  box-shadow: #4e4d4d;
+}
+
+.illist{
+ position: relative;
+}
+
+hr {
+   border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15); /* やわらかい灰色 */
+  margin: 60px 100px; /* 上下の余白 */
+}
+
+/* <!----- ヘッダー ここから------> */
+
+
+
+header{
+  background-image: url(../img/header01.png);
+  padding: 1.5% 0;
+  position: static; /* ← stickyやabsoluteは外す */
+  min-height: 140px;             /* ← 背景が見えるだけの高さを確保 */
+}
+
+/* 白いボックスだけ固定表示 */
+header .box{
+  position: fixed;
+  top: 12px;                 /* 追従位置。好みで調整 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  display: flex;
+  max-width: 1000px;
+  width: calc(100% - 40px);  /* 端の余白（20px×2） */
+  margin: 0 auto;
+  background: #fff;
+  align-items: center;
+  border-radius: 50px;
+  height: 70px;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08); /* 影はお好みで */
+}
+
+
+
+.header_menu{
+    list-style: none;
+    gap: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 18%;
+}
+
+header li{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold ;
+    font-style: normal;
+    font-weight: 700;
+    transition: color 0.3s ease; /* スムーズに変わるように */
+}
+
+
+.header_menu li a:hover {
+  color: #F5C32D;           
+}
+
+
+header .kajiki{
+    padding-left: 3%;
+    padding-top: 1.1%;
+}
+
+.kajiki{
+    transform-origin: center bottom;
+    animation: yurayura 2s linear infinite;
+}
+
+@keyframes yurayura {
+  0% , 100%{
+      transform: rotate(10deg);
+  }
+  50%{
+      transform: rotate(-10deg);
+  }
+}
+
+.wave{
+  background-image: url(..//img/header02.png);
+  width: 100%;
+  height: 42px;
+  
+}
+
+.wave02{
+  background-image: url(..//img/header03.png);
+  width: 100%;
+  height: 42px;
+  
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* <!----- FV ここから------> */
+
+.fv{
+    background-image: url(../img/top//top_fv.png);
+    width: 100%;
+    height: 90vh;
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+h1{
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 90px;
+  color: #F5C32D;
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+}
+
+.fv_name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 55.5%;
+    margin-top: -15px;
+}
+
+/* ↓背景水色 */
+.back{
+  background-image: url(../img/top/Frame\ 5.png);
+  background-size: cover;
+}
+
+/* 灰色背景 */
+.back_gray{
+   background-image: url(../img/gray_back.png);
+   background-size: cover;
+}
+
+.book{
+    position: absolute;
+    top: 275px;
+    left: 10%;
+}
+
+.cop{
+   position: absolute;
+   top: 280px;
+
+    right: 15%;
+}
+
+ /* <!----紹介セクションここから-------> */
+
+.introduction{
+   
+    padding-top: 100px; 
+}
+
+.introduction h2{
+    font-size: clamp(1.25rem, calc(0.8vw + 1rem), 2rem);
+    text-align: center;
+    font-weight: 600;
+    padding-top: 5%;
+}
+
+.thanks p{
+    text-align: center;
+    padding: 50px 0  ;
+    line-height:1.5em;
+}
+
+.thanks{
+   background-image: url(../img//top/Group\ 6.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center top;
+   margin: 0 auto;
+   width: 80%;
+   max-width: 1100px;
+}
+
+.thanks .btn{
+  display: flex;
+  margin: 0 auto;
+  background-color: #DC8087;
+  padding: 10px 30px;
+  border-radius: 4px;
+  width: fit-content;
+  color: #fff;
+  box-shadow: #4e4d4d;
+  transition: 0.5s all;
+}
+.thanks .btn:hover{
+    background-color: #edca62;
+
+
+}
+ 
+.thanks .box{
+    padding: 16% 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.kumo{
+    background-image: url(../img/kumo.png);
+    padding: 109px;
+}
+
+/* -----------WORKここから---------- */
+
+
+
+
+
+
+.top_work{
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding-top: 10%; */
+    
+}
+
+.top_work .work_box{
+    padding-top: 10%;
+    
+}
+
+.top_girl{
+    position: absolute;
+    bottom: -40px;
+    width: 38%;
+    left: -50px;
+}
+
+.top_cat01{
+    position: absolute;
+   bottom: -50px;
+    width: 23%;
+    right: 5%;
+}
+
+.work01_girl{
+
+    position: absolute;
+   bottom: 50px;
+    width: 16%;
+    right: 20px;
+}
+
+.work01_cat01{
+    position: absolute;
+    bottom: -90px;
+    width: 15%;
+   
+
+}
+.top_work .block{
+   display: flex;
+   justify-content: center;
+   gap: 6%;
+   padding: 7% 0 3% 0;
+}
+
+.topwork_box p{
+    padding-top: 30px;
+}
+
+.zoom-box{
+    overflow: hidden;
+}
+
+.zoom-box a img{
+    transition: all 0.3s;
+}
+
+.zoom-box a:hover img{
+    transform: scale(1.1);
+}
+
+/* -----------CONTACTここから---------- */
+
+/* フォーム全体のスタイル */
+form {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 700;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-style: normal;
+    color: #4e4d4d;
+    font-size: clamp(0.875rem, calc(0.25vw + 0.8rem), 1rem);
+}
+
+/* 入力欄のスタイル */
+input, textarea {
+    width: 100%; /* box-sizingが適用されるので、paddingやborder込みで100%に収まる */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact_box{
+
+  
+
+    padding-bottom: 20px;
+}
+
+  .mail{
+ text-align: center;
+ font-size: 25px;
+    }
+
+/* テキストエリアの高さを調整 */
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* 送信ボタンのスタイル */
+button {
+    background-color: #669BB9;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ホバー時のボタンスタイル */
+button:hover {
+    background-color: #F5C32D;
+}
+
+
+/* -----------footerここから---------- */
+
+footer .hei{
+    padding-top: 580px;
+    background-image: url(../img/Group\ 35.png);
+    background-size:cover;
+    margin-top: -100px;
+   
+}
+
+.maru {
+    text-align: center;
+    padding: 0% 0;
+}
+
+
+footer .hei02{
+    padding-top: 29%;
+    background-image: url(../img/Group\ 34.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+footer .hei03{
+    padding-top: 29%;
+    background-image: url(../img/Group\ 37.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.maru {
+    text-align: center;
+    padding: 0.5% 0;
+}
+
+
+/* ====================
+         about
+==================== */
+
+.about{
+    padding-top: 1%;
+    padding-bottom: 10%;
+}
+
+.box01{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 4%;
+    padding-top: 5%;
+    gap:6% ;
+    align-items: center;
+}
+
+
+
+.about .name01{
+    color:#438AB1 ;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about .name02{
+    font-size: 40px;
+    font-weight: 800;
+    padding: 0 0 10px 0;
+}
+
+.about .txt{
+    padding: 2.5% 0;
+}
+
+.my{
+  width: 42%;
+}
+
+/* -----------skills ここから---------- */
+
+.heading{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+
+/* 線のアニメーション */
+.heading::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #bfbaba;
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineGrow 1.2s ease-out forwards;
+}
+
+/* 線が左から右に伸びる動き */
+@keyframes lineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.heading h4{
+    padding-right: 20px;
+    padding-left: 1%;
+}
+
+.skll_block{
+    max-width: 900px;
+    margin:  0 auto;
+    display: flex;
+    gap: 30%;
+    padding-bottom: 2%;
+}
+
+
+/* 全体のスキル行 */
+.skll_box {
+  gap:  30px;       
+  
+}
+
+/* 1スキルのまとまり */
+.skill_item {
+  display: flex;
+  align-items: center;     /* 縦方向で中央揃え */
+  gap: 15px;               /* アイコンと文字の間 */
+}
+
+.item_block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  right: 40px; 
+  padding-bottom: 8%;
+}
+
+/* -----------強み ここから---------- */
+
+.strengths{
+    padding: 2% 5% ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.strengths_box{
+    display: flex;
+    gap: 7%;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 10%;
+
+}
+
+
+.box11 .one {
+    /* font-size: clamp(0.875rem, calc(0.25vw + 0.8rem), 1rem); */
+    line-height: 1;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.strengths_box .box22{
+    width: 70%;
+}
+
+
+
+/* -----------職歴 ここから---------- */
+
+.biography{
+    display: flex;
+    /* justify-content: center; */
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 8%;
+}
+
+.schedule {
+    position: relative;
+    font-size: 14px;
+}
+.schedule::before {
+    position: absolute;
+    top: 0px;
+    left: 5.4em; /* ← 少し左に寄せる */
+    width: 6px;
+    height: 100%;
+    background-color: #deeef7;
+    content: "";
+}
+
+.schedule ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.schedule li {
+    position: relative;
+    display: flex;
+ 
+    width: 90%;
+}
+.schedule li + li {
+    margin-top: 2em;
+}
+
+.schedule_time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 5em;
+    height: 2em;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+}
+.schedule_time::before {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    z-index: -1;
+    background-color: #438AB1;
+    content: "";
+}
+.schedule_time::after {
+    position: absolute;
+    top: 50%;
+    left: 5.4em; /* ← 線と同じ位置に合わせる */
+   
+    transform: translate(-50%, -50%); /* ← 丸の中心を線の中心に揃える */
+    width: 1em;
+    height: 1em;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #438AB1;
+    content: "";
+    
+}
+
+
+
+.schedule_content {
+    margin: 0px 0px 0px 3em;
+    width: calc(100% - 10em);
+}
+
+
+/* 全体のスケール：これだけでem計算ごと拡大縮小（線・丸の位置も追従） */
+.schedule{
+  /* 好みで数値を上下：0.9rem～1.1remくらいが使いやすい */
+  font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.1rem);
+}
+
+/* タイトルと本文を個別に調整したい場合 */
+.schedule_content_title p{
+  font-weight: 700;
+  line-height: 1.6;
+  /* 見出しを少し大きく */
+  font-size: clamp(1.05rem, 0.7vw + 0.9rem, 1.4rem);
+  padding-bottom: 0.8%;
+  font-weight: 800;
+
+}
+.schedule_content_detail p{
+  line-height: 1.9;
+  /* 本文は控えめ */
+  font-size: clamp(0.95rem, 0.45vw + 0.8rem, 1.1rem);
+}
+
+/* 横幅（テキストの可読域） */
+.biography{
+  max-width: 1200px;   /* もっと広げたいなら 1280px などに */
+  padding-inline: 20px;/* 端が詰まる場合の左右余白 */
+}
+
+/* 各行のテキスト幅を広げる：90%→100%、計算も見直し */
+.schedule li{
+  width: 100%;
+}
+.schedule_content{
+  margin-left: 2.5em;          /* 3em → 少し詰めて行間を確保 */
+  width: calc(100% - 7.5em);   /* 10em → 丸 + 余白分だけ差し引く */
+  padding-bottom: 5%;
+}
+
+/* 線と丸の位置（左の縦ライン）：
+   schedule_time の幅(5em) + 余白(約0.5～0.7em) に合わせて調整 */
+.schedule::before{
+  left: 5.7em;   /* 6.5em → 文字幅を広げた分だけ少し左へ */
+}
+.schedule_time::after{
+  left: 5.7em;   /* 丸もラインと同じ位置に */
+}
+
+/* モバイル最適化（幅が狭い時はさらに読みやすく） */
+@media (max-width: 640px){
+  .schedule{
+    font-size: clamp(0.95rem, 1.2vw + 0.8rem, 1.05rem);
+  }
+  .schedule_content{
+    margin-left: 2em;
+    width: calc(100% - 7em);
+  }
+  .schedule::before,
+  .schedule_time::after{
+    left: 5.2em;
+  }
+}
+
+
+/* タイムライン用の位置・太さを変数化 */
+.schedule{
+  --line-x: 5.7em; /* 線の左端（好みで微調整OK） */
+  --line-w: 6px;   /* 線の太さ */
+}
+
+/* 縦線 */
+.schedule::before{
+  left: var(--line-x);
+  width: var(--line-w);
+}
+
+/* 丸（中心を線の中心に合わせる） */
+.schedule_time::after{
+  left: calc(var(--line-x) + var(--line-w) / 2);
+  transform: translate(-50%, -50%);
+}
+
+/* モバイル */
+@media (max-width: 640px){
+  .schedule{
+    --line-x: 5.2em; /* 狭い時の線の左端 */
+    --line-w: 6px;
+  }
+}
+
+
+/* ----------その他 ここから---------- */
+
+.others{
+    display: flex;
+    gap:5%;
+    justify-content: center;
+    padding-bottom: 8%;
+}
+
+
+/* =================
+      work
+================= */
+
+
+.work{
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+/* ----------どんぶら ここから---------- */
+
+.work .work_box{
+    display: flex;
+    align-items: center;
+    padding:0  5%;
+    margin-top: -5%;
+}
+
+.pc{
+    width: 58%;
+}
+
+.work_box .txt{
+   margin-left: -10%;
+   padding-bottom: 5%;
+   width: 100%;
+
+}
+
+
+
+.work .work_block01{
+    width: 40%;
+}
+
+.work_block01 .url{
+    color: #438AB1;
+       margin-left: -10%;
+   margin-top:-4%;
+    width: 100%;
+    text-align: right;  
+}
+
+.work .work_block02 {
+     display: grid;
+  grid-template-columns: 120px 1fr; /* 左:見出し/右:本文 */
+  column-gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+h6{
+  font-size: 20px;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  color: #438AB1;
+  text-align: left;   /* 中央 → 左 */
+  margin: 0;   
+}
+
+.work_block02 .txt{
+     margin: 0;
+  width: 100%;
+}
+
+.work_block02 .txt00{
+  margin: 0;
+  width: 100%;
+text-decoration: underline;
+}
+
+.work_block02 .txt00:hover{
+    color:#438AB1;    
+     color: #F5C32D;     
+}   
+
+.work_block02 .txt02{
+    margin: 0;
+  width: 100%;
+}
+
+.txt03{
+    padding: 30px 0;
+}
+
+
+.work_block02 .box{
+  
+   display: block;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.palette{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;                    /* 間隔 */
+  flex-wrap: wrap;  
+}
+
+.palette_block{
+  grid-column: 1 / -1;          /* ← 2カラムをまたぐ */
+  display: flex;
+  justify-content: center;      /* 画面中央に */
+  margin-top: 55px;
+  width: 100%;  
+}
+
+
+
+.color {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  border: 3px solid transparent;
+}
+
+
+
+/* カラーごとの指定 */
+.color-white {
+  background: #ffffff;
+}
+.color-pink {
+  background: #f3b9b9;
+}
+.color-blue {
+  background: #c0e1e0;
+}
+.color-green {
+  background: #a6e1a9;
+}
+.color-yellow {
+  background: #f4dd25;
+}
+
+.color-White01 {
+  background: #FEFEFE;
+}
+
+.color-gray01 {
+  background: #D1D4D4;
+}
+
+.color-read {
+  background: #D98A7A;
+}
+
+/* カラーコードの文字 */
+.palette p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #4e4d4d;
+}
+
+/* ----------スクロールここから---------- */
+.scrollable-box {
+  max-height: 500px;
+  overflow-y: auto;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 影を追加して立体感を出す（任意） */
+ 
+}
+
+.scrollable{
+  display: flex;              /* 中央寄せ用 */
+  justify-content: center;    /* 水平方向の中央寄せ */
+  align-items: center;        /* 垂直方向の中央寄せ（必要なら） */
+  margin: 0 auto;             /* 親要素に対して中央配置 */
+  padding-bottom: 1%;
+}
+
+  .scr{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #438AB1;
+
+  }
+
+
+
+  /* ================
+    hana
+  ================= */
+
+  .hana01{
+    position: absolute;
+   top: 50%;
+    width: 8%;
+    right: 7%;
+}
+
+ .hana02{
+    position: absolute;
+   bottom: -30%;
+    width: 8%;
+    left: 3%;
+   
+}
+

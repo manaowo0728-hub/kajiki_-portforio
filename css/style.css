@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 
 /* =====================
@@ -210,13 +211,13 @@ h1{
 
 .book{
     position: absolute;
-    top: 275px;
+    top: 400px;
     left: 10%;
 }
 
 .cop{
    position: absolute;
-   top: 280px;
+   top: 400px;
 
     right: 15%;
 }
@@ -424,12 +425,15 @@ button:hover {
 
 /* -----------footerここから---------- */
 
+
 footer .hei{
-    padding-top: 580px;
+
     background-image: url(../img/Group\ 35.png);
     background-size:cover;
     margin-top: -100px;
    
+    width: 100%;
+    aspect-ratio: 1854 / 768;                 /* この画像の実寸比 */
 }
 
 .maru {
@@ -979,14 +983,14 @@ text-decoration: underline;
 
   .hana01{
     position: absolute;
-   top: 50%;
+   top: 35%;
     width: 8%;
     right: 7%;
 }
 
  .hana02{
     position: absolute;
-   bottom: -30%;
+   bottom: 25%;
     width: 8%;
     left: 3%;
    
